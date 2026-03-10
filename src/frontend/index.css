@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("/assets/fonts/BricolageGrotesque-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Sora";
+  src: url("/assets/fonts/Sora-Variable.woff2") format("woff2");
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+
+    /* Dark fitness theme - deep charcoal + electric lime */
+    --background: 0.14 0.005 240;
+    --foreground: 0.96 0.005 240;
+
+    --card: 0.18 0.007 240;
+    --card-foreground: 0.96 0.005 240;
+
+    --popover: 0.2 0.008 240;
+    --popover-foreground: 0.96 0.005 240;
+
+    /* Electric lime green as primary */
+    --primary: 0.85 0.22 134;
+    --primary-foreground: 0.12 0.01 240;
+
+    --secondary: 0.24 0.01 240;
+    --secondary-foreground: 0.88 0.005 240;
+
+    --muted: 0.22 0.008 240;
+    --muted-foreground: 0.58 0.01 240;
+
+    --accent: 0.28 0.01 240;
+    --accent-foreground: 0.96 0.005 240;
+
+    --destructive: 0.62 0.22 25;
+    --destructive-foreground: 0.985 0 0;
+
+    --border: 0.28 0.01 240;
+    --input: 0.24 0.008 240;
+    --ring: 0.85 0.22 134;
+
+    /* Fitness metric colors */
+    --steps-color: 0.72 0.19 142;
+    --water-color: 0.62 0.18 240;
+    --workout-color: 0.72 0.18 50;
+    --cardio-color: 0.65 0.2 310;
+
+    /* Chart colors */
+    --chart-1: 0.85 0.22 134;
+    --chart-2: 0.62 0.18 240;
+    --chart-3: 0.72 0.18 50;
+    --chart-4: 0.65 0.2 310;
+    --chart-5: 0.72 0.19 142;
+
+    --sidebar: 0.16 0.006 240;
+    --sidebar-foreground: 0.96 0.005 240;
+    --sidebar-primary: 0.85 0.22 134;
+    --sidebar-primary-foreground: 0.12 0.01 240;
+    --sidebar-accent: 0.22 0.008 240;
+    --sidebar-accent-foreground: 0.96 0.005 240;
+    --sidebar-border: 0.28 0.01 240;
+    --sidebar-ring: 0.85 0.22 134;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Sora", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: "Bricolage Grotesque", sans-serif;
+  }
+
+  .text-steps {
+    color: oklch(var(--steps-color));
+  }
+
+  .text-water {
+    color: oklch(var(--water-color));
+  }
+
+  .text-workout {
+    color: oklch(var(--workout-color));
+  }
+
+  .text-cardio {
+    color: oklch(var(--cardio-color));
+  }
+
+  .bg-steps {
+    background-color: oklch(var(--steps-color));
+  }
+
+  .bg-water {
+    background-color: oklch(var(--water-color));
+  }
+
+  .bg-workout {
+    background-color: oklch(var(--workout-color));
+  }
+
+  .bg-cardio {
+    background-color: oklch(var(--cardio-color));
+  }
+
+  .bg-steps\/15 {
+    background-color: oklch(var(--steps-color) / 0.15);
+  }
+
+  .bg-water\/15 {
+    background-color: oklch(var(--water-color) / 0.15);
+  }
+
+  .bg-workout\/15 {
+    background-color: oklch(var(--workout-color) / 0.15);
+  }
+
+  .bg-cardio\/15 {
+    background-color: oklch(var(--cardio-color) / 0.15);
+  }
+
+  .ring-steps {
+    --tw-ring-color: oklch(var(--steps-color));
+  }
+}
